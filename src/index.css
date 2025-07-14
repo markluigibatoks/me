@@ -16,6 +16,17 @@
 }
 
 @layer components {
+
+  .container {
+        position: relative;
+        padding: 0 24px;
+    }
+
+  .wrapper {
+      max-width: 1280px;
+      width: 100%;
+  }
+
   .button-primary {
     background-color: var(--color-primary);
     border-radius: var(--rounded-xl);
