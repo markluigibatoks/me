@@ -15,17 +15,31 @@
     --color-grey: #F5F2F0;
 }
 
+@base {
+    body {
+        font-family: "Roboto Condensed", sans-serif;
+    }
+}
+
 @layer components {
 
-  .container {
+  .main-box {
         position: relative;
         padding: 0 24px;
+        max-width: 1920px;
+        width: 100%;
+        margin: 0 auto;
     }
 
-  .wrapper {
-      max-width: 1280px;
-      width: 100%;
-  }
+    .wrapper {
+        max-width: 1280px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .text-gradient {
+        @apply bg-gradient-to-r from-[#A54E2B] to-[#DC9853] bg-clip-text text-transparent;
+    }
 
   .button-primary {
     background-color: var(--color-primary);
