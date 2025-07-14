@@ -1,2 +1,52 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
 @plugin "@tailwindcss/typography";
+
+@theme {
+    --font-roboto: "Roboto Condensed", sans-serif;
+
+    --text-paragraph: 16px;
+    --text-paragraph--line-height: 24px;
+
+    --color-primary: #FFD2A4;
+    --color-primary-hover: #F2C79B;
+    --color-light-orange: #FFF5EB;
+    --color-grey: #F5F2F0;
+}
+
+@layer components {
+  .button-primary {
+    background-color: var(--color-primary);
+    border-radius: var(--rounded-xl);
+    padding: 24px 64px;
+    box-shadow: var(--shadow-xl);
+
+    text-align: center;
+    font-size: var(--text-paragraph);
+    line-height: 16px;
+    color: var(--color-black);
+
+    @variant hover {
+        background-color: var(--color-primary-hover);
+    }
+  }
+
+  .button-secondary {
+    background-color: var(--color-black);
+    border-radius: var(--rounded-xl);
+    padding: 24px 64px;
+    box-shadow: var(--shadow-xl);
+
+    text-align: center;
+    font-size: var(--text-paragraph);
+    line-height: 16px;
+    color: var(--color-primary);
+
+    @variant hover {
+        background-color: var(--color-white);
+    }
+  }
+}
+
+
