@@ -6,8 +6,39 @@
     <?php wp_head(); ?>
   </head>
   <body <?php body_class(); ?>>
-    <div class="bg-gray-300">
-      <div class="max-w-4xl mx-auto mb-5 px-4">
-        <h1 class="text-3xl py-10"><a href="<?php echo get_home_url(); ?>" class="hover:text-blue-500">Welcome To Our Header!</a></h1>
+    <div class="z-10 sticky top-0">
+      <div class="z-10 main-box bg-black">
+        <div class="wrapper">
+          <div class="py-3 lg:py-0 flex items-center justify-between">
+            <a href="<?php echo site_url('/')?>">
+              <div class="xl:pr-16 pr-6">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" />
+              </div>
+            </a>
+
+            <nav class="hidden lg:block">
+                <ul class="flex gap-12">
+                    <li>
+                      <a class="leading-20 uppercase text-label-2 tracking-normal font-light opacity-90 text-white hover:underline <?php echo is_front_page() ? 'current-menu-item' : '' ?>" href="<?php echo site_url('/'); ?>">Home</a>
+                    </li>
+                    <li>
+                      <a class="leading-20 uppercase text-label-2 tracking-normal font-light opacity-90 text-white hover:underline" href="#">About Us</a>
+                    </li>
+                    <li>
+                      <a class="leading-20 uppercase text-label-2 tracking-normal font-light opacity-90 text-white hover:underline" href="#">Sermon</a>
+                    </li>
+                    <li>
+                      <a class="leading-20 uppercase text-label-2 tracking-normal font-light opacity-90 text-white hover:underline" href="#">Blog</a>
+                    </li>
+                    <li>
+                      <a class="leading-20 uppercase text-label-2 tracking-normal font-light opacity-90 text-white hover:underline" href="#">Contact Us</a>
+                    </li>
+                </ul>
+            </nav>
+            <?php get_template_part('/components/drawer-toggle') ?>
+          </div>
+        </div>
       </div>
+
+      <?php get_template_part('/components/drawer') ?>
     </div>
