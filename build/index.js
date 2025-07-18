@@ -61,6 +61,45 @@ class Drawer {
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Drawer);
 
+/***/ }),
+
+/***/ "./src/scripts/QuickHacks.js":
+/*!***********************************!*\
+  !*** ./src/scripts/QuickHacks.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//This is a quick solution but needs to be addressed soon. Keep this minimal and make sure to come back here and move the function to where it correctly belong.
+
+class QuickHacks {
+  constructor() {
+    this.footerLogo = document.querySelector('#footer-logo');
+    this.copyright = document.querySelector('#copyright');
+    this.footerBody = document.querySelector('#footer-body');
+    this.relocate();
+    this.events();
+  }
+  events() {
+    window.addEventListener('resize', () => {
+      this.relocate();
+    });
+  }
+  relocate() {
+    const currentWidth = window.innerWidth;
+    const isLargeViewport = currentWidth >= 1024;
+    if (isLargeViewport) {
+      this.footerLogo.after(this.copyright);
+    } else {
+      this.footerBody.after(this.copyright);
+    }
+  }
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (QuickHacks);
+
 /***/ })
 
 /******/ 	});
@@ -127,9 +166,12 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _scripts_Drawer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scripts/Drawer */ "./src/scripts/Drawer.js");
+/* harmony import */ var _scripts_QuickHacks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scripts/QuickHacks */ "./src/scripts/QuickHacks.js");
+
 
 document.addEventListener('DOMContentLoaded', function () {
   new _scripts_Drawer__WEBPACK_IMPORTED_MODULE_0__["default"]('#drawer', '#drawer-toggle', '#drawer-close');
+  new _scripts_QuickHacks__WEBPACK_IMPORTED_MODULE_1__["default"]();
 });
 })();
 
