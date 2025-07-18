@@ -1,5 +1,5 @@
 <?php
     get_header();
-    get_template_part("/components/banner");
+    get_template_part("/partials/banner");
     get_footer();
 ?>
