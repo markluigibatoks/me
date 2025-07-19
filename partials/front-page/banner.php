@@ -1,6 +1,6 @@
 <div class="main-box p-0">
     <div class="w-full h-full">
-        <img class="w-full h-full object-cover" src="<?php echo get_template_directory_uri();?>/assets/images/front-page/placeholder.svg" alt="placeholder"/>
+        <img class="w-full h-full object-cover" src="<?php echo get_template_directory_uri();?>/assets/images/about-us/placeholder.svg" alt="placeholder"/>
     </div>
     <div class="main-box bg-black lg:bg-transparent lg:absolute lg:top-1/2 lg:-translate-y-1/2 lg:left-0">
         <div class="wrapper">
