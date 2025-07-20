@@ -32,3 +32,12 @@ function register_menus() {
 add_action('after_setup_theme', 'register_menus');
 add_action('after_setup_theme', 'theme_support');
 
+add_action('enqueue_block_editor_assets', function () {
+  wp_enqueue_script(
+    'editor-custom-logic',
+    get_theme_file_uri('/build/editor.js'),
+    ['wp-blocks', 'wp-hooks', 'wp-edit-post'],
+    '1.0',
+    true
+  );
+});

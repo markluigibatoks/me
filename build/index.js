@@ -1,6 +1,24 @@
+/*
+ * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
 /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
+
+/***/ "./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scripts_Drawer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scripts/Drawer */ \"./src/scripts/Drawer.js\");\n/* harmony import */ var _scripts_QuickHacks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scripts/QuickHacks */ \"./src/scripts/QuickHacks.js\");\n\n\n\ndocument.addEventListener('DOMContentLoaded', function () {\n  new _scripts_Drawer__WEBPACK_IMPORTED_MODULE_0__[\"default\"]('#drawer', '#drawer-toggle', '#drawer-close')\n  new _scripts_QuickHacks__WEBPACK_IMPORTED_MODULE_1__[\"default\"]()\n});\n\n\n//# sourceURL=webpack://change-me/./src/index.js?\n}");
+
+/***/ }),
 
 /***/ "./src/scripts/Drawer.js":
 /*!*******************************!*\
@@ -8,58 +26,7 @@
   \*******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-class Drawer {
-  constructor(drawerSelector, toggleSelector, closeSelector) {
-    this.drawer = document.querySelector(drawerSelector);
-    this.toggle = document.querySelector(toggleSelector);
-    this.hamburger = this.toggle?.querySelector('.group');
-    this.close = closeSelector ? document.querySelector(closeSelector) : null;
-    if (this.toggle && this.drawer) {
-      this.toggle.addEventListener('click', () => this.toggleDrawer());
-    }
-    if (this.close && this.drawer) {
-      this.close.addEventListener('click', () => this.closeDrawer());
-    }
-    window.addEventListener('resize', this.handleResize.bind(this));
-    document.addEventListener('keydown', event => {
-      const isEscKeyPressed = event.key === 'Escape';
-      if (isEscKeyPressed) {
-        this.closeDrawer();
-      }
-    });
-  }
-  toggleDrawer() {
-    const isOpen = this.hamburger.classList.contains('open');
-    if (isOpen) {
-      this.closeDrawer();
-    } else {
-      this.openDrawer();
-    }
-  }
-  openDrawer() {
-    this.hamburger.classList.add('open');
-    this.drawer.classList.remove('h-0');
-    this.drawer.classList.add('h-screen');
-  }
-  closeDrawer() {
-    this.hamburger.classList.remove('open');
-    this.drawer.classList.remove('h-screen');
-    this.drawer.classList.add('h-0');
-  }
-  handleResize() {
-    const currentWidth = window.innerWidth;
-    const isLargeViewport = currentWidth >= 1024;
-    const isOpen = this.hamburger.classList.contains('open');
-    if (isLargeViewport && isOpen) {
-      this.closeDrawer();
-    }
-  }
-}
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Drawer);
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nclass Drawer {\n    constructor(drawerSelector, toggleSelector, closeSelector) {\n        this.drawer = document.querySelector(drawerSelector)\n        this.toggle = document.querySelector(toggleSelector)\n        this.hamburger = this.toggle?.querySelector('.group')\n        this.close = closeSelector ? document.querySelector(closeSelector) : null\n\n        if (this.toggle && this.drawer) {\n            this.toggle.addEventListener('click', () => this.toggleDrawer())\n        }\n\n        if (this.close && this.drawer) {\n            this.close.addEventListener('click', () => this.closeDrawer())\n        }\n\n        window.addEventListener('resize', this.handleResize.bind(this))\n\n        document.addEventListener('keydown', (event) => {\n            const isEscKeyPressed = event.key === 'Escape'\n            if(isEscKeyPressed) {\n                this.closeDrawer()\n            }\n        })\n    }\n\n    toggleDrawer() {\n        const isOpen = this.hamburger.classList.contains('open')\n        if(isOpen) {\n            this.closeDrawer()\n        } else {\n            this.openDrawer()\n        }\n    }\n\n    openDrawer() {\n        this.hamburger.classList.add('open')\n        this.drawer.classList.remove('h-0')\n        this.drawer.classList.add('h-screen')\n    }\n\n    closeDrawer() {\n        this.hamburger.classList.remove('open')\n        this.drawer.classList.remove('h-screen') \n        this.drawer.classList.add('h-0')\n    }\n\n    handleResize() {\n        const currentWidth = window.innerWidth;\n        const isLargeViewport = currentWidth >= 1024;\n        const isOpen = this.hamburger.classList.contains('open');\n\n        if(isLargeViewport && isOpen) {\n            this.closeDrawer()\n        }\n    }\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Drawer);\n\n//# sourceURL=webpack://change-me/./src/scripts/Drawer.js?\n}");
 
 /***/ }),
 
@@ -69,36 +36,7 @@ class Drawer {
   \***********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-//This is a quick solution but needs to be addressed soon. Keep this minimal and make sure to come back here and move the function to where it correctly belong.
-
-class QuickHacks {
-  constructor() {
-    this.footerLogo = document.querySelector('#footer-logo');
-    this.copyright = document.querySelector('#copyright');
-    this.footerBody = document.querySelector('#footer-body');
-    this.relocate();
-    this.events();
-  }
-  events() {
-    window.addEventListener('resize', () => {
-      this.relocate();
-    });
-  }
-  relocate() {
-    const currentWidth = window.innerWidth;
-    const isLargeViewport = currentWidth >= 1024;
-    if (isLargeViewport) {
-      this.footerLogo.after(this.copyright);
-    } else {
-      this.footerBody.after(this.copyright);
-    }
-  }
-}
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (QuickHacks);
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n//This is a quick solution but needs to be addressed soon. Keep this minimal and make sure to come back here and move the function to where it correctly belong.\n\nclass QuickHacks {\n  \n  constructor() {\n    this.footerLogo = document.querySelector('#footer-logo')\n    this.copyright = document.querySelector('#copyright')\n    this.footerBody = document.querySelector('#footer-body')\n\n    this.relocate()\n\n    this.events()\n  }\n\n  events() {\n    window.addEventListener('resize', () => {\n      this.relocate();\n    })\n  }\n\n  relocate() {\n    const currentWidth = window.innerWidth\n    const isLargeViewport = currentWidth >= 1024\n\n    if(isLargeViewport) {\n      this.footerLogo.after(this.copyright);\n    } else {\n      this.footerBody.after(this.copyright);\n    }\n  }\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (QuickHacks);\n\n//# sourceURL=webpack://change-me/./src/scripts/QuickHacks.js?\n}");
 
 /***/ })
 
@@ -158,23 +96,11 @@ class QuickHacks {
 /******/ 	})();
 /******/ 	
 /************************************************************************/
-var __webpack_exports__ = {};
-// This entry needs to be wrapped in an IIFE because it needs to be isolated against other modules in the chunk.
-(() => {
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _scripts_Drawer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scripts/Drawer */ "./src/scripts/Drawer.js");
-/* harmony import */ var _scripts_QuickHacks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scripts/QuickHacks */ "./src/scripts/QuickHacks.js");
-
-
-document.addEventListener('DOMContentLoaded', function () {
-  new _scripts_Drawer__WEBPACK_IMPORTED_MODULE_0__["default"]('#drawer', '#drawer-toggle', '#drawer-close');
-  new _scripts_QuickHacks__WEBPACK_IMPORTED_MODULE_1__["default"]();
-});
-})();
-
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module can't be inlined because the eval devtool is used.
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/index.js");
+/******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=index.js.map
