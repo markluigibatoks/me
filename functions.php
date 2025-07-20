@@ -1,4 +1,5 @@
 <?php
+require get_theme_file_path('theme-setup/inline-svg.php');
 require get_theme_file_path('/theme-setup/register-sidebars.php');
 require get_theme_file_path('/theme-setup/new-post-type.php');
 require get_theme_file_path('/theme-setup/new-shortcodes.php');
@@ -23,6 +24,11 @@ function theme_support() {
   add_theme_support('title-tag');
   add_theme_support('post-thumbnails');
   add_theme_support( 'wp-block-styles' );
+
+  add_theme_support('editor-styles');
+  add_editor_style('build/editor.css');
+
+  add_image_size('featured-image', 572, 377, ['center', 'center']);
 }
 
 function register_menus() {
@@ -41,3 +47,4 @@ add_action('enqueue_block_editor_assets', function () {
     true
   );
 });
+
