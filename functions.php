@@ -4,6 +4,8 @@ require get_theme_file_path('/theme-setup/register-sidebars.php');
 require get_theme_file_path('/theme-setup/new-post-type.php');
 require get_theme_file_path('/theme-setup/new-shortcodes.php');
 require get_theme_file_path('/theme-setup/seo-fix.php');
+require get_theme_file_path('/theme-setup/route-contact-us.php');
+require get_theme_file_path('/theme-setup/route-newsletter.php');
 
 function load_theme_assets() {
   wp_enqueue_script('ourmainjs', get_theme_file_uri('/build/index.js'), array('wp-element', 'react-jsx-runtime'), '1.0', true);
@@ -46,5 +48,8 @@ add_action('enqueue_block_editor_assets', function () {
     '1.0',
     true
   );
+
+  $post_type = get_post_type();
+  wp_add_inline_script('editor-custom-logic', 'window.currentPostType = "' . esc_js($post_type) . '";', 'before');
 });
 
