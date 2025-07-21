@@ -9,7 +9,6 @@
     "build:css": "npm-run-all css:build:index css:build:editor",
     "css:build:index": "tailwindcss -i ./src/index.css -o ./build/index.css --minify",
     "css:build:editor": "tailwindcss -i ./src/editor.css -o ./build/editor.css --minify",
-
     "start": "npm-run-all --parallel watch:js watch:css",
     "watch:js": "webpack --watch",
     "watch:css": "npm-run-all css:watch:index css:watch:editor",
@@ -28,5 +27,8 @@
     "tailwindcss": "^4.0.6",
     "webpack": "^5.100.2",
     "webpack-cli": "^6.0.1"
+  },
+  "dependencies": {
+    "sweetalert2": "^11.22.2"
   }
 }
