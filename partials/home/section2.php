@@ -10,8 +10,7 @@
                 the_post();
             ?>
             
-            <div class="<?php echo $flag ? 'px-8 pt-12 pb-8 border-primary border-b-16' : 'px-8 py-12'; ?> bg-white w-full text-center lg:text-left">
-              <span class="text-cap-3 text-gradient uppercase">Relationship</span>
+            <div class="<?php echo $flag ? 'px-8 pt-12 pb-8 border-primary border-b-16' : 'px-8 py-12'; ?> bg-light-black w-full text-center lg:text-left hover:border-primary hover:border-b-16 hover:pb-8 hover:bg-lighter-black">
               <a href="<?php the_permalink(); ?>" class="hover:opacity-70">
                 <h2 class="mt-4 text-h5 mb-4 uppercase"><?php the_title(); ?></h2>
               </a>

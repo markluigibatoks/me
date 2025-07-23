@@ -47,10 +47,9 @@
     --text-cap-3: 12px;
     --text-cap-3--letter-spacing: 0%;
 
-    --color-primary: #FFD2A4;
-    --color-primary-hover: #F2C79B;
-    --color-light-orange: #FFF5EB;
-    --color-grey: #F5F2F0;
+    --color-primary: #F9DC5C;
+    --color-light-black: #0f0f0f;
+    --color-lighter-black: #202020;
 }
 
 body {
@@ -102,7 +101,7 @@ body {
         text-transform: uppercase;
 
         @variant hover {
-            background-color: var(--color-primary-hover);
+            opacity: 90%;
         }
 
         @media screen and (min-width: 1024px) {
@@ -179,15 +178,15 @@ body {
 }
 
 .page-numbers {
-    @apply inline-block px-4 py-2 border border-black text-label-2 text-black;
+    @apply inline-block px-4 py-2 border border-light-black text-label-2 text-white;
 }
 
 .page-numbers:hover {
-    @apply bg-grey border-gray-400;
+    @apply bg-light-black border-gray-400;
 }
 
 .page-numbers.current {
-    @apply bg-primary border-primary cursor-default font-bold;
+    @apply bg-primary border-primary cursor-default font-bold text-black;
 }
 
 ul.page-numbers {
