@@ -3,9 +3,9 @@
       <div id="footer-body" class="grid sm:grid-cols-2 lg:flex gap-5 gap-y-10">
         <div class="text-white">
           <a id="footer-logo" href="<?php echo site_url('/')?>">
-            <div class="xl:pr-16 pr-6">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" />
-            </div>
+            <div class="xl:pr-16 pr-6 text-white">
+                <?php echo file_get_contents(get_template_directory() . '/assets/images/logo.svg'); ?>
+              </div>
           </a>
 
           <div id="copyright" class="lg:text-left text-center mt-16 lg:mt-7 uppercase text-cap-2 text-white">

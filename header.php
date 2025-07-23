@@ -11,8 +11,8 @@
         <div class="wrapper">
           <div class="py-3 lg:py-0 flex items-center justify-between">
             <a href="<?php echo site_url('/')?>">
-              <div class="xl:pr-16 pr-6">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" />
+              <div class="xl:pr-16 pr-6 text-white">
+                <?php echo file_get_contents(get_template_directory() . '/assets/images/logo.svg'); ?>
               </div>
             </a>
 
@@ -22,16 +22,10 @@
                       <a class="leading-20 uppercase text-label-2 tracking-normal font-light opacity-90 text-white hover:underline <?php echo is_front_page() ? 'current-menu-item' : '' ?>" href="<?php echo site_url('/'); ?>">Home</a>
                     </li>
                     <li>
-                      <a class="leading-20 uppercase text-label-2 tracking-normal font-light opacity-90 text-white hover:underline" href="#">About Us</a>
+                      <a class="leading-20 uppercase text-label-2 tracking-normal font-light opacity-90 text-white hover:underline" href="<?php echo site_url('/portfolio'); ?>">Portfolio</a>
                     </li>
                     <li>
-                      <a class="leading-20 uppercase text-label-2 tracking-normal font-light opacity-90 text-white hover:underline" href="#">Services</a>
-                    </li>
-                    <li>
-                      <a class="leading-20 uppercase text-label-2 tracking-normal font-light opacity-90 text-white hover:underline" href="#">Blog</a>
-                    </li>
-                    <li>
-                      <a class="leading-20 uppercase text-label-2 tracking-normal font-light opacity-90 text-white hover:underline" href="#">Contact Us</a>
+                      <a class="leading-20 uppercase text-label-2 tracking-normal font-light opacity-90 text-white hover:underline" href="<?php echo site_url('/contact-me'); ?>">Contact Me</a>
                     </li>
                 </ul>
             </nav>

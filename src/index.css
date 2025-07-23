@@ -55,7 +55,7 @@
 
 body {
     font-family: "Roboto Condensed", sans-serif;
-    @apply bg-grey;
+    @apply bg-black;
 }
 
 @layer components {
