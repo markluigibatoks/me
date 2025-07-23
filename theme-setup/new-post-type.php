@@ -35,39 +35,4 @@ function register_contact_us_post_type() {
 }
 add_action('init', 'register_contact_us_post_type');
 
-function register_newsletter_cpt() {
-    $labels = [
-        'name'               => 'Newsletters',
-        'singular_name'      => 'Newsletter',
-        'menu_name'          => 'Newsletters',
-        'name_admin_bar'     => 'Newsletter',
-        'add_new'            => 'Add New',
-        'add_new_item'       => 'Add New Newsletter',
-        'new_item'           => 'New Newsletter',
-        'edit_item'          => 'Edit Newsletter',
-        'view_item'          => 'View Newsletter',
-        'all_items'          => 'All Newsletters',
-        'search_items'       => 'Search Newsletters',
-        'parent_item_colon'  => 'Parent Newsletters:',
-        'not_found'          => 'No newsletters found.',
-        'not_found_in_trash' => 'No newsletters found in Trash.',
-    ];
-
-    $args = [
-        'labels'             => $labels,
-        'public'             => false,             // Not visible on frontend
-        'show_ui'            => true,              // Visible in admin dashboard
-        'show_in_menu'       => true,
-        'menu_icon'          => 'dashicons-email-alt', // Newsletter-like icon
-        'supports'           => ['title', 'editor', 'custom-fields'],
-        'has_archive'        => false,
-        'exclude_from_search'=> true,
-        'publicly_queryable' => false,
-        'show_in_rest'       => true,              // Enables block editor + REST API
-    ];
-
-    register_post_type('newsletter', $args);
-}
-add_action('init', 'register_newsletter_cpt');
-
 
