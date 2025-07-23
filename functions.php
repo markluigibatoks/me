@@ -1,8 +1,6 @@
 <?php
 require get_theme_file_path('theme-setup/inline-svg.php');
-require get_theme_file_path('/theme-setup/register-sidebars.php');
 require get_theme_file_path('/theme-setup/new-post-type.php');
-require get_theme_file_path('/theme-setup/new-shortcodes.php');
 require get_theme_file_path('/theme-setup/seo-fix.php');
 require get_theme_file_path('/theme-setup/route-contact-us.php');
 
