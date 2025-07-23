@@ -16,7 +16,7 @@
     )
   );
 
-  // get_template_part("/partials/about-us/section1");
+  get_template_part("/partials/contact-me/section1");
   
   get_footer();
 ?>

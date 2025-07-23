@@ -11,7 +11,7 @@ function contactUsRoutes() {
 
 function createContactUs($data) {
 
-  $full_name  = sanitize_text_field($data['full_name'] ?? '');
+  $name  = sanitize_text_field($data['name'] ?? '');
   $email = strtolower(trim(sanitize_email($data['email'] ?? '')));
   $message = strtolower(trim(sanitize_text_field($data['message'] ?? '')));
 
@@ -19,7 +19,7 @@ function createContactUs($data) {
     return new WP_Error('incorrect_email', 'Incorrect Email', ['status' => 400]);
   }
 
-  if (empty($full_name) || empty($email) || empty($message)) {
+  if (empty($name) || empty($email) || empty($message)) {
     return new WP_Error('missing_fields', 'Required fields missing', ['status' => 400]);
   }
 
@@ -29,7 +29,7 @@ function createContactUs($data) {
       'post_status' => 'pending',
       'post_title' => wp_trim_words($message, 5),
       'meta_input' => array(
-        'full_name' => $full_name,
+        'name' => $name,
         'email' => $email,
         'message' => $message,
       )
