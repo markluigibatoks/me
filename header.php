@@ -22,10 +22,10 @@
                       <a class="leading-20 uppercase text-label-2 tracking-normal font-light opacity-90 text-white hover:underline <?php echo is_front_page() ? 'current-menu-item' : '' ?>" href="<?php echo site_url('/'); ?>">Home</a>
                     </li>
                     <li>
-                      <a class="leading-20 uppercase text-label-2 tracking-normal font-light opacity-90 text-white hover:underline" href="<?php echo site_url('/portfolio'); ?>">Portfolio</a>
+                      <a class="leading-20 uppercase text-label-2 tracking-normal font-light opacity-90 text-white hover:underline <?php echo is_home() ? 'current-menu-item' : '' ?>" href="<?php echo site_url('/portfolio'); ?>">Portfolio</a>
                     </li>
                     <li>
-                      <a class="leading-20 uppercase text-label-2 tracking-normal font-light opacity-90 text-white hover:underline" href="<?php echo site_url('/contact-me'); ?>">Contact Me</a>
+                      <a class="leading-20 uppercase text-label-2 tracking-normal font-light opacity-90 text-white hover:underline <?php echo is_page('contact-me') ? 'current-menu-item' : '' ?>" href="<?php echo site_url('/contact-me'); ?>">Contact Me</a>
                     </li>
                 </ul>
             </nav>

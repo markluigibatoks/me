@@ -5,6 +5,8 @@ class QuickHacks {
   constructor() {
     this.footerLogo = document.querySelector('#footer-logo')
     this.copyright = document.querySelector('#copyright')
+    this.quicklinks = document.querySelector('#quicklinks')
+    this.attribution = document.querySelector('#attribution')
     this.footerBody = document.querySelector('#footer-body')
 
     this.relocate()
@@ -24,8 +26,10 @@ class QuickHacks {
 
     if(isLargeViewport) {
       this.footerLogo.after(this.copyright);
+      this.attribution.before(this.quicklinks)
     } else {
       this.footerBody.after(this.copyright);
+      this.footerLogo.after(this.quicklinks);
     }
   }
 }

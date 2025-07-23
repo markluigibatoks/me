@@ -1,6 +1,6 @@
 <div class="bg-black flex items-start justify-center px-6 pt-20 pb-6 main-box">
 
-    <div class="relative max-w-xl p-10 rounded-3xl bg-white/15 backdrop-blur-[40px] backdrop-saturate-150 border border-white/20 shadow-[0_12px_48px_0_rgba(31,38,135,0.4)] text-white overflow-hidden" >
+    <div class="relative max-w-xl p-6 md:p-8 lg:p-10 rounded-3xl bg-white/15 backdrop-blur-[40px] backdrop-saturate-150 border border-white/20 shadow-[0_12px_48px_0_rgba(31,38,135,0.4)] text-white overflow-hidden" >
         <div aria-hidden="true" class="absolute -top-20 -left-20 w-64 h-64 bg-linear-to-tr from-white/30 via-white/10 to-transparent rounded-full blur-3xl animate-liquidMove" style="filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.2));"></div>
 
         <div aria-hidden="true" class="animate-shimmer absolute top-0 left-0 w-full h-full opacity-5 bg-linear-to-r from-white/5 via-red-500 to-transparent bg-size-[200%]"></div>
