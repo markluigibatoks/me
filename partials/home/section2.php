@@ -1,6 +1,6 @@
 <div class="main-box lg:py-32 py-10">
     <div class="wrapper">
-        <div class="w-full text-center">
+        <div class="w-full text-center text-white">
           <h2 class="lg:text-h2 md:text-h4 text-h5 uppercase">All Blog Posts</h2>
 
           <div class="lg:mt-16 mt-5 grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">

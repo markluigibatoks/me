@@ -6,10 +6,10 @@
   ]);
 ?>
 
-<div class="main-box lg:pt-54 pt-10">
+<div class="main-box lg:pt-20 pt-10">
     <div class="wrapper">
-        <div class="w-full text-center">
-          <span class="text-label-2 uppercase">Our Blog</span>
+        <div class="w-full text-center text-white">
+          <span class="text-label-2 uppercase">Portfolio</span>
           <h2 class="lg:text-h2 md:text-h4 text-h5 uppercase">Most Recent Post</h2>
         </div>
 

@@ -9,10 +9,10 @@
     null,
     array(
       'image' => array(
-        'src' => get_template_directory_uri() . "/assets/images/about-us/placeholder.svg",
+        'src' => get_template_directory_uri() . "/assets/images/contact-me/banner.jpg",
         'alt' => "a place full of trees"
       ),
-      'heading' => "Serving the world around us"
+      'title' => get_the_title()
     )
   );
 
