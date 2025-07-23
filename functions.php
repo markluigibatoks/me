@@ -5,7 +5,6 @@ require get_theme_file_path('/theme-setup/new-post-type.php');
 require get_theme_file_path('/theme-setup/new-shortcodes.php');
 require get_theme_file_path('/theme-setup/seo-fix.php');
 require get_theme_file_path('/theme-setup/route-contact-us.php');
-require get_theme_file_path('/theme-setup/route-newsletter.php');
 
 function load_theme_assets() {
   wp_enqueue_script('ourmainjs', get_theme_file_uri('/build/index.js'), array('wp-element', 'react-jsx-runtime'), '1.0', true);
