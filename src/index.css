@@ -3,7 +3,6 @@
 @import "tailwindcss";
 
 @theme {
-    --font-roboto: "Roboto Condensed", sans-serif;
 
     --text-paragraph: 16px;
     --text-paragraph--line-height: 24px;
@@ -163,24 +162,72 @@ body {
             }
         }
     }
+
+    .animate-wiggle {
+        display: inline-block;
+        animation: wiggle 1.5s ease-in-out infinite;
+        transform-origin: 70% 70%;
+    }
+
+    .animate-shimmer {
+        animation: shimmer 6s linear infinite;
+    }
+
+    .animate-liquidMove {
+        animation: liquidMove 8s linear infinite;
+    }
 }
 
 .page-numbers {
-  @apply inline-block px-4 py-2 border border-black text-label-2 text-black;
+    @apply inline-block px-4 py-2 border border-black text-label-2 text-black;
 }
 
 .page-numbers:hover {
-  @apply bg-grey border-gray-400;
+    @apply bg-grey border-gray-400;
 }
 
 .page-numbers.current {
-  @apply bg-primary border-primary cursor-default font-bold;
+    @apply bg-primary border-primary cursor-default font-bold;
 }
 
 ul.page-numbers {
-  @apply flex justify-center gap-2 mt-8;
+    @apply flex justify-center gap-2 mt-8;
 }
 
 ul.page-numbers li {
-  @apply list-none;
+    @apply list-none;
+}
+
+@keyframes wiggle {
+    0%, 100% { transform: rotate(0deg); }
+    15% { transform: rotate(14deg); }
+    30% { transform: rotate(-8deg); }
+    45% { transform: rotate(14deg); }
+    60% { transform: rotate(-4deg); }
+    75% { transform: rotate(10deg); }
+    90% { transform: rotate(0deg); }
+}
+
+@keyframes liquidMove {
+    0% {
+        transform: translate(0, 0);
+        opacity: 0.4;
+    }
+    50% {
+        transform: translate(40px, 40px);
+        opacity: 0.2;
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 0.4;
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
 }
