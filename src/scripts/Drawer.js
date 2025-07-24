@@ -2,7 +2,6 @@ class Drawer {
     constructor(drawerSelector, toggleSelector, closeSelector) {
         this.drawer = document.querySelector(drawerSelector)
         this.toggle = document.querySelector(toggleSelector)
-        this.hamburger = this.toggle?.querySelector('.group')
         this.close = closeSelector ? document.querySelector(closeSelector) : null
 
         if (this.toggle && this.drawer) {
@@ -24,7 +23,7 @@ class Drawer {
     }
 
     toggleDrawer() {
-        const isOpen = this.hamburger.classList.contains('open')
+        const isOpen = this.toggle.classList.contains('open')
         if(isOpen) {
             this.closeDrawer()
         } else {
@@ -33,13 +32,13 @@ class Drawer {
     }
 
     openDrawer() {
-        this.hamburger.classList.add('open')
+        this.toggle.classList.add('open')
         this.drawer.classList.remove('h-0')
         this.drawer.classList.add('h-screen')
     }
 
     closeDrawer() {
-        this.hamburger.classList.remove('open')
+        this.toggle.classList.remove('open')
         this.drawer.classList.remove('h-screen') 
         this.drawer.classList.add('h-0')
     }
@@ -47,7 +46,7 @@ class Drawer {
     handleResize() {
         const currentWidth = window.innerWidth;
         const isLargeViewport = currentWidth >= 1024;
-        const isOpen = this.hamburger.classList.contains('open');
+        const isOpen = this.toggle.classList.contains('open');
 
         if(isLargeViewport && isOpen) {
             this.closeDrawer()

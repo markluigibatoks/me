@@ -1,4 +1,5 @@
 <?php
+require get_theme_file_path('theme-setup/wordpress-login.php');
 require get_theme_file_path('theme-setup/inline-svg.php');
 require get_theme_file_path('/theme-setup/new-post-type.php');
 require get_theme_file_path('/theme-setup/seo-fix.php');

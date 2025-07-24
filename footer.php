@@ -1,4 +1,4 @@
-<div class="main-box bg-black text-white py-16">
+<footer class="main-box bg-black text-white py-16">
     <div class="wrapper">
       <div id="footer-body" class="flex flex-col sm:flex-row gap-10 justify-between">
         <div class="">
@@ -44,7 +44,7 @@
         </div>
       </div>
     </div>
-</div>
+</footer>
 
 <?php wp_footer(); ?>
 </body>
