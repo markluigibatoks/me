@@ -32,7 +32,7 @@ class FormContactUs {
                 
                 this.swal.success({
                     title: 'Message Sent!',
-                    text: 'Thank you for sending us a message! We will get back to you shortly.'
+                    text: 'Thank you for sending me a message! I will get back to you shortly.'
                 })
 
                 this.form.reset()
