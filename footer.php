@@ -13,7 +13,7 @@
             <p>Thanks for visiting!</p>
 
             <div  class="mt-8 uppercase text-cap-2">
-              &copy; <?php echo date('Y')?>. Portfolio v1.0.0
+              &copy; <?php echo date('Y')?>. Portfolio v1.0.1
             </div>
           </div>
         </div>
