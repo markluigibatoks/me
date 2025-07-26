@@ -6,15 +6,15 @@
 
             <form class="mt-10" id="contact-us-form" method="POST">
               <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <label>
+                <label class="col-span-1">
                   <input type="name" name="name" placeholder="Name" class="w-full px-8 py-3 border border-lighter-black bg-light-black"/>
                 </label>
 
-                <label>
+                <label class="col-span-1">
                   <input type="email" name="email" placeholder="Email" class="w-full px-8 py-3 border border-lighter-black bg-light-black"/>
                 </label>
 
-                <label class="col-span-2">
+                <label class="md:col-span-2">
                   <textarea name="message" placeholder="Message" rows="4" class="w-full px-8 py-3 border border-lighter-black bg-light-black"></textarea>
                 </label>
               </div>
