@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="main-box lg:py-16 py-10 bg-white">
+<main class="main-box lg:py-16 py-10 bg-white">
     <?php if (have_posts()) {
       while(have_posts()) {
         the_post(); ?>
@@ -15,6 +15,6 @@
         </div>
       <?php }
     } ?>
-</div>
+</main>
 
 <?php get_footer(); ?>

@@ -5,7 +5,7 @@
             <p>Reach out anytime — I'd love to hear from you! I usually reply within 24 hours.</p>
 
             <form class="mt-10" id="contact-us-form" method="POST">
-              <div class="grid grid-cols-2 gap-8">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <label>
                   <input type="name" name="name" placeholder="Name" class="w-full px-8 py-3 border border-lighter-black bg-light-black"/>
                 </label>

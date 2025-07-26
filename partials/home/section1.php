@@ -6,7 +6,7 @@
   ]);
 ?>
 
-<div class="main-box lg:pt-20 pt-10">
+<main class="main-box lg:pt-20 pt-10">
     <div class="wrapper">
         <div class="w-full text-center text-white">
           <span class="text-label-2 uppercase">Portfolio</span>
@@ -40,4 +40,4 @@
           }
         ?>
     </div>
-</div>
+</main>
