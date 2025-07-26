@@ -2,7 +2,7 @@
 
 get_header(); ?>
 
-<div class="max-w-4xl mx-auto px-4">
+<main class="max-w-4xl mx-auto px-4">
 
   <!-- example react component -->
   <div id="render-react-example-here"></div>
@@ -19,6 +19,6 @@ get_header(); ?>
       <?php }
     } ?>
   </div>
-</div>
+</main>
 
 <?php get_footer();
