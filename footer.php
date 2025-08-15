@@ -35,7 +35,7 @@
         <div id="attribution" class="text-justify md:max-w-lg lg:max-w-xl">
           <p class="mb-5">
             This portfolio is a self-initiated project showcasing my front-end development skills.
-            It's open source—feel free to explore the code! Always learning. Always building.
+            It's open source and feel free to explore the code! Always learning. Always building.
           </p>
           <p>
             Built with WordPress, styled using Tailwind CSS, and typeset with the Roboto Condensed font.
